@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Analytical Platform</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Time-Series Data Visualization</h1>
+  <form id="filterForm">
+    <label for="field">Field:</label>
+    <select id="field" name="field">
+      <option value="field1">Field 1</option>
+      <option value="field2">Field 2</option>
+      <option value="field3">Field 3</option>
+    </select>
+    <label for="start_date">Start Date:</label>
+    <input type="date" id="start_date" name="start_date" required>
+    <label for="end_date">End Date:</label>
+    <input type="date" id="end_date" name="end_date" required>
+    <button type="submit">Filter</button>
+  </form>
+  <canvas id="chart" width="400" height="200"></canvas>
+  <script src="app.js"></script>
+</body>
+</html>

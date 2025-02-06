@@ -3,8 +3,8 @@ const { getMeasurements, getMetrics, addMeasurement } = require("../controllers/
 
 const router = express.Router();
 
-router.get("/", getMeasurements);  
-router.get("/metrics", getMetrics);  
-router.post("/", addMeasurement); 
+router.get("/", getMeasurements);  // Получить данные
+router.get("/metrics", getMetrics);  // Получить метрики
+router.post("/", addMeasurement);  // Добавить новые данные
 
 module.exports = router;

@@ -1,5 +1,0 @@
-[
-    { "timestamp": "2025-01-01T12:00:00Z", "field1": 22.5, "field2": 45.3, "field3": 1200 },
-    { "timestamp": "2025-01-01T13:00:00Z", "field1": 23.1, "field2": 46.0, "field3": 1250 },
-    { "timestamp": "2025-01-01T14:00:00Z", "field1": 24.0, "field2": 47.2, "field3": 1300 }
-]

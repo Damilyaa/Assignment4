@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Measurement = require('./models/measurement'); // Подключаем модель
+const Measurement = require('./models/Measurement'); // Подключаем модель
 
 // Подключение к MongoDB (измените URL, если нужно)
 mongoose.connect('mongodb://localhost:27017/analytics_db', {
@@ -33,10 +33,10 @@ const seedDatabase = async () => {
         await Measurement.deleteMany(); // Очистка старых данных
         const data = generateMeasurements();
         await Measurement.insertMany(data);
-        console.log("✅ Данные успешно добавлены!");
+        console.log("Данные успешно добавлены!");
         mongoose.connection.close();
     } catch (error) {
-        console.error("❌ Ошибка при добавлении данных:", error);
+        console.error("Ошибка при добавлении данных:", error);
         mongoose.connection.close();
     }
 };

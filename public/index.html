@@ -10,11 +10,13 @@
 <body>
 <div class="container">
     <h1>Analytics Dashboard</h1>
-    <input type="date" id="start_date">
-    <input type="date" id="end_date">
-    <button onclick="fetchData()">Load Data</button>
+    <div class="date-inputs">
+        <input type="date" id="start_date" placeholder="Start Date">
+        <input type="date" id="end_date" placeholder="End Date">
+        <button onclick="fetchData()">Load Data</button>
+    </div>
     <canvas id="dataChart"></canvas>
-    <div id="metrics"></div>
+    <div id="metrics" class="metrics"></div>
 </div>
 <script src="./script.js"></script>
 </body>

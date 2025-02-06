@@ -1,5 +1,4 @@
-let chartInstance = null; // Store the chart instance globally
-
+let chartInstance = null; 
 async function fetchData() {
     const startDate = document.getElementById('start_date').value;
     const endDate = document.getElementById('end_date').value;
@@ -35,23 +34,50 @@ function renderChart(data) {
         datasets: [{
             label: "Field 1",
             data: data.map(d => d.field1),
-            borderColor: "#007bff",
-            backgroundColor: "rgba(0, 123, 255, 0.5)",
+            borderColor: "#ff69b4",
+            backgroundColor: "rgba(255, 105, 180, 0.5)", 
+            pointBackgroundColor: "#ff1493", 
+            pointBorderColor: "#fff", 
+            pointBorderWidth: 2,
+            pointRadius: 5, 
             fill: true
         }]
     };
 
-    chartInstance = new Chart(ctx, { // Assign new chart instance to global variable
+    chartInstance = new Chart(ctx, { 
         type: "line",
         data: chartData,
         options: {
             responsive: true,
             plugins: {
-                legend: { labels: { color: "#333" } }
+                legend: {
+                    labels: {
+                        color: "#ff69b4", 
+                    }
+                },
+                tooltip: {
+                    backgroundColor: "#ff69b4",
+                    titleColor: "#fff", 
+                    bodyColor: "#fff", 
+                }
             },
             scales: {
-                x: { ticks: { color: "#333" } },
-                y: { ticks: { color: "#333" } }
+                x: {
+                    ticks: {
+                        color: "#ff69b4", 
+                    },
+                    grid: {
+                        color: "rgba(255, 105, 180, 0.3)"
+                    }
+                },
+                y: {
+                    ticks: {
+                        color: "#ff69b4", 
+                    },
+                    grid: {
+                        color: "rgba(255, 105, 180, 0.3)" 
+                    }
+                }
             }
         }
     });

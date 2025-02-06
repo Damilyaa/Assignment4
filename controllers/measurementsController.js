@@ -1,6 +1,5 @@
 const Measurement = require("../models/Measurement");
 
-// Получить все данные или по диапазону дат
 const getMeasurements = async (req, res) => {
     try {
         const { start_date, end_date, field } = req.query;
@@ -20,7 +19,6 @@ const getMeasurements = async (req, res) => {
     }
 };
 
-// Получить метрики (среднее, минимум, максимум, стандартное отклонение)
 const getMetrics = async (req, res) => {
     try {
         const { field } = req.query;
@@ -44,7 +42,6 @@ const getMetrics = async (req, res) => {
     }
 };
 
-// Добавить новые данные
 const addMeasurement = async (req, res) => {
     try {
         const { timestamp, field1, field2, field3 } = req.body;
